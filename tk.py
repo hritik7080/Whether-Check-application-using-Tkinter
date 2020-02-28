@@ -99,7 +99,7 @@ city = tk.StringVar()
 
 
 def action():
-    url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=ee9133747d7277d4974f74b431ee3042".format(city.get())
+    url = "http://api.openweathermap.org/data/2.5/weather?q={}&appid=YOUR_APP_ID".format(city.get())
     res = requests.get(url)
     data = res.json()
     updated.set(data['clouds']['all'])
